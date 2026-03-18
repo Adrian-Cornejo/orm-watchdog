@@ -1,0 +1,50 @@
+{
+  "name": "orm-watchdog",
+  "version": "0.1.0",
+  "description": "Zero-config N+1 and slow query detector for Prisma, Drizzle and TypeORM",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "keywords": [
+    "prisma",
+    "orm",
+    "n+1",
+    "performance",
+    "typescript",
+    "query-analysis",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@prisma/client": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@prisma/client": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
